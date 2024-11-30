@@ -1,0 +1,44 @@
+{
+  "os":  "Linux-6.1.85+-x86_64-with-glibc2.35",
+  "python":  "3.10.12",
+  "startedAt":  "2024-10-23T09:00:08.880749Z",
+  "args":  [
+    "task=detect",
+    "mode=train",
+    "model=yolov8n.pt",
+    "data=/content/drive/MyDrive/ComputerVisionAndImageAnalysis/Package/PID-Symbols-1/data.yaml",
+    "epochs=25"
+  ],
+  "program":  "/usr/local/bin/yolo",
+  "email":  "22pt05@psgtech.ac.in",
+  "root":  "/content/drive/MyDrive/ComputerVisionAndImageAnalysis/Package",
+  "host":  "3d3f1151269a",
+  "username":  "root",
+  "executable":  "/usr/bin/python3",
+  "cpu_count":  1,
+  "cpu_count_logical":  2,
+  "gpu":  "Tesla T4",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "120942624768",
+      "used":  "35232976896"
+    }
+  },
+  "memory":  {
+    "total":  "13609431040"
+  },
+  "cpu":  {
+    "count":  1,
+    "countLogical":  2
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "Tesla T4",
+      "memoryTotal":  "16106127360",
+      "cudaCores":  2560,
+      "architecture":  "Turing"
+    }
+  ],
+  "cudaVersion":  "12.2"
+}

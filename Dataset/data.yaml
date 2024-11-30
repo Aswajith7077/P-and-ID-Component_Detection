@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['3-way Valve', 'Butterflyvalve', 'Gate valve', 'Plug Valve', 'ball valve']
+
+roboflow:
+  workspace: pid-ksv2b
+  project: p-id-4w5qy
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/pid-ksv2b/p-id-4w5qy/dataset/3

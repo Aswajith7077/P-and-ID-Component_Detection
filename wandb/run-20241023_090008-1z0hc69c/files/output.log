@@ -1,0 +1,239 @@
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+Downloading https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt to 'yolo11n.pt'...
+100% 5.35M/5.35M [00:00<00:00, 118MB/s]
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mtrain: [0mScanning /content/drive/MyDrive/ComputerVisionAndImageAnalysis/Package/PID-Symbols-1/train/labels... 2631 images, 0 backgrounds, 0 corrupt: 100% 2631/2631 [01:01<00:00, 43.07it/s] 
+[34m[1mtrain: [0mNew cache created: /content/drive/MyDrive/ComputerVisionAndImageAnalysis/Package/PID-Symbols-1/train/labels.cache
+/usr/local/lib/python3.10/dist-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 1.4.18 (you have 1.4.15). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+[34m[1malbumentations: [0mBlur(p=0.01, blur_limit=(3, 7)), MedianBlur(p=0.01, blur_limit=(3, 7)), ToGray(p=0.01, num_output_channels=3, method='weighted_average'), CLAHE(p=0.01, clip_limit=(1, 4.0), tile_grid_size=(8, 8))
+[34m[1mval: [0mScanning /content/drive/MyDrive/ComputerVisionAndImageAnalysis/Package/PID-Symbols-1/valid/labels... 95 images, 0 backgrounds, 0 corrupt: 100% 95/95 [00:03<00:00, 28.58it/s]
+[34m[1mval: [0mNew cache created: /content/drive/MyDrive/ComputerVisionAndImageAnalysis/Package/PID-Symbols-1/valid/labels.cache
+Plotting labels to runs/detect/train/labels.jpg...
+[34m[1moptimizer:[0m 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically...
+[34m[1moptimizer:[0m AdamW(lr=5.4e-05, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+[34m[1mTensorBoard: [0mmodel graph visualization added ✅
+Image sizes 640 train, 640 val
+Using 2 dataloader workers
+Logging results to [1mruns/detect/train[0m
+Starting training for 25 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       1/25      3.56G      2.552      6.049      1.785        130        640: 100% 165/165 [01:13<00:00,  2.24it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:03<00:00,  1.03s/it]
+                   all         95        729          0          0          0          0
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       2/25      3.44G      2.155      5.396      1.438        117        640: 100% 165/165 [01:10<00:00,  2.34it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:02<00:00,  1.07it/s]
+                   all         95        729    0.00528     0.0927    0.00842     0.0042
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       3/25      3.64G      2.071      4.687      1.364         90        640: 100% 165/165 [01:10<00:00,  2.34it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:02<00:00,  1.15it/s]
+                   all         95        729      0.414     0.0383     0.0166    0.00819
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       4/25      3.88G      2.028      4.315      1.323         66        640: 100% 165/165 [01:10<00:00,  2.35it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:02<00:00,  1.31it/s]
+                   all         95        729      0.439     0.0402      0.027     0.0151
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       5/25      3.45G      1.997      4.021        1.3         28        640: 100% 165/165 [01:15<00:00,  2.19it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:01<00:00,  1.74it/s]
+                   all         95        729      0.365     0.0771     0.0403     0.0226
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       6/25      3.42G      1.961      3.784      1.291         64        640: 100% 165/165 [01:11<00:00,  2.30it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:01<00:00,  1.96it/s]
+                   all         95        729      0.381      0.105     0.0638     0.0344
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       7/25      3.85G      1.947      3.659      1.279         99        640: 100% 165/165 [01:11<00:00,  2.31it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:01<00:00,  1.91it/s]
+                   all         95        729      0.418      0.102     0.0781     0.0389
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       8/25      3.52G      1.905      3.496      1.262         52        640: 100% 165/165 [01:12<00:00,  2.29it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:01<00:00,  1.82it/s]
+                   all         95        729      0.396      0.113     0.0885     0.0468
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       9/25      3.49G      1.911      3.415      1.261         81        640: 100% 165/165 [01:16<00:00,  2.17it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:01<00:00,  1.87it/s]
+                   all         95        729      0.406      0.131      0.091     0.0461
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      10/25      3.57G      1.903      3.318      1.258         42        640: 100% 165/165 [01:10<00:00,  2.33it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:01<00:00,  1.95it/s]
+                   all         95        729      0.435      0.136       0.11     0.0563
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      11/25      3.64G      1.876      3.238      1.249        153        640: 100% 165/165 [01:11<00:00,  2.30it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:01<00:00,  2.04it/s]
+                   all         95        729      0.391      0.152      0.121     0.0639
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      12/25      3.66G      1.875      3.207      1.251         77        640: 100% 165/165 [01:10<00:00,  2.35it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:02<00:00,  1.10it/s]
+                   all         95        729       0.41      0.162      0.131     0.0689
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      13/25      3.48G      1.865      3.099       1.24         57        640: 100% 165/165 [01:14<00:00,  2.20it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:02<00:00,  1.49it/s]
+                   all         95        729       0.42      0.163      0.147     0.0773
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      14/25      3.65G      1.847      3.081      1.234        107        640: 100% 165/165 [01:10<00:00,  2.35it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:03<00:00,  1.05s/it]
+                   all         95        729      0.438      0.167      0.168     0.0891
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      15/25      3.72G      1.852      3.044      1.234         56        640: 100% 165/165 [01:10<00:00,  2.34it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:03<00:00,  1.01s/it]
+                   all         95        729      0.426      0.164       0.16     0.0838
+Closing dataloader mosaic
+[34m[1malbumentations: [0mBlur(p=0.01, blur_limit=(3, 7)), MedianBlur(p=0.01, blur_limit=(3, 7)), ToGray(p=0.01, num_output_channels=3, method='weighted_average'), CLAHE(p=0.01, clip_limit=(1, 4.0), tile_grid_size=(8, 8))
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      16/25      3.15G      1.833      2.944      1.266        117        640: 100% 165/165 [01:08<00:00,  2.40it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:02<00:00,  1.14it/s]
+                   all         95        729      0.331      0.198      0.179     0.0947
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      17/25         3G      1.821      2.895      1.257         66        640: 100% 165/165 [01:11<00:00,  2.31it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:01<00:00,  1.86it/s]
+                   all         95        729       0.34      0.186      0.185     0.0974
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      18/25      3.01G      1.819      2.843      1.258         76        640: 100% 165/165 [01:08<00:00,  2.41it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:03<00:00,  1.05s/it]
+                   all         95        729      0.365       0.21      0.184      0.103
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      19/25      3.07G      1.812      2.812      1.254        110        640: 100% 165/165 [01:07<00:00,  2.45it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:02<00:00,  1.06it/s]
+                   all         95        729      0.375      0.208      0.201      0.108
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      20/25      3.03G      1.803       2.79      1.259        110        640: 100% 165/165 [01:08<00:00,  2.42it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:01<00:00,  1.84it/s]
+                   all         95        729      0.394      0.213      0.197      0.111
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      21/25      2.99G      1.802      2.754      1.247         97        640: 100% 165/165 [01:09<00:00,  2.38it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:02<00:00,  1.39it/s]
+                   all         95        729       0.38      0.217      0.201      0.111
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      22/25      2.97G      1.806      2.774      1.253         43        640: 100% 165/165 [01:09<00:00,  2.39it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:01<00:00,  1.88it/s]
+                   all         95        729      0.369      0.222      0.208      0.114
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      23/25      3.02G      1.798      2.725      1.236         55        640: 100% 165/165 [01:10<00:00,  2.33it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:01<00:00,  1.90it/s]
+                   all         95        729      0.381      0.221      0.202       0.11
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      24/25      2.96G      1.788      2.707      1.242         66        640: 100% 165/165 [01:07<00:00,  2.44it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:03<00:00,  1.07s/it]
+                   all         95        729       0.37      0.214      0.202       0.11
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      25/25         3G      1.779      2.695      1.237        104        640: 100% 165/165 [01:06<00:00,  2.47it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:01<00:00,  1.74it/s]
+                   all         95        729      0.372      0.224      0.204       0.11
+
+25 epochs completed in 0.516 hours.
+Optimizer stripped from runs/detect/train/weights/last.pt, 7.0MB
+Optimizer stripped from runs/detect/train/weights/best.pt, 7.0MB
+
+Validating runs/detect/train/weights/best.pt...
+Ultralytics 8.3.20 🚀 Python-3.10.12 torch-2.4.1+cu121 CUDA:0 (Tesla T4, 15102MiB)
+Model summary (fused): 168 layers, 3,365,267 parameters, 0 gradients, 9.7 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% 3/3 [00:03<00:00,  1.23s/it]
+                   all         95        729      0.369      0.221      0.209      0.114
+      3 Way Ball Valve          2          2          1          0          0          0
+      3 Way Gate Valve         18         21      0.193      0.434       0.27      0.154
+     3 Way Globe Valve          1          1          0          0          0          0
+      4 Way Ball Valve          1          1          1          0          0          0
+      4 Way Gate Valve          8         13      0.205      0.238       0.25      0.156
+        Angle Blowdown          3          3          1          0          0          0
+      Angle GlobeValve          3          3          1          0          0          0
+           Angle Valve         14         17       0.27      0.471      0.445      0.278
+BackPressure Regulator          6          7       0.15      0.278      0.114     0.0651
+Balance Diaphragm Gate Valve          4          4          1          0      0.125     0.0872
+            Ball Valve         21         40      0.172      0.238      0.165     0.0922
+         Bleeder Valve          5          9      0.313      0.556      0.527      0.308
+       Butterfly Valve         20         31      0.303      0.419      0.377      0.181
+      Centrifugal Pump         14         38      0.554      0.895      0.757      0.402
+           Check Valve         19         39      0.395      0.359      0.334      0.155
+     Closed Ball Valve          1          1          1          0          0          0
+     Closed Gate Valve          8         10      0.221        0.1      0.144     0.0565
+      Cock Globe Valve          1          1          1          0          0          0
+            Cock Valve          8          8      0.665      0.125       0.15      0.134
+       Diaphragm Valve         12         17       0.18      0.168       0.16     0.0982
+Electric operator gate valve          1          1      0.258          1      0.995      0.697
+Fail Closed Safe Position          7          7      0.427      0.571       0.44      0.295
+Fail Indeterminate Safe Position          1          1          0          0     0.0765     0.0536
+Fail Lock Safe Position          2          2      0.142        0.5      0.606      0.452
+Fail Open Safe Position          3          3      0.203      0.333      0.113     0.0794
+               Flanged          2          3          0          0     0.0999     0.0514
+  Float Operated Valve          4          4          0          0     0.0235     0.0113
+            Gate Valve         30         70      0.324      0.685      0.497       0.22
+                 Gauge          4          4          0          0      0.192     0.0629
+           Globe Valve         20         21      0.307      0.333      0.366      0.181
+Hand Operated Angle Valve          6          6          1          0     0.0264     0.0185
+Hand Operated Gate Valve         16         24      0.164      0.458      0.255      0.118
+Hand Operated Globe Valve          7          7          0          0     0.0986     0.0622
+Hydraulic Operated Ball Valve          3          3      0.199      0.333      0.173      0.104
+Hydraulic Operated Gate Valve          7          7       0.17      0.286      0.108     0.0684
+Hydraulic Operated Globe Valve          4          4      0.119       0.25     0.0643      0.045
+Integrated Block Valve          3          3          0          0      0.242     0.0996
+           Knife Valve          3          3          0          0      0.171     0.0857
+           Level Alarm          1          1          1          0          0          0
+      Level Alarm High          1          1          0          0          0          0
+       Level Alarm Low          1          1          0          0          0          0
+                 Motor          2          3          1          0      0.283      0.195
+Motor Operated Angle Valve          4          6      0.169        0.5      0.128     0.0698
+Motor Operated Butterfly Valve          2          2          1          0          0          0
+Motor Operated Diaphragm Valve          2          2          1          0      0.502      0.351
+Motor Operated Gate Valve          8          9      0.268      0.333       0.26       0.15
+Motor Operated Globe Valve          3          3       0.16          1      0.166     0.0995
+Motor Operated Plug Valve          4          4          1          0      0.251      0.126
+          Needle Valve         21         53       0.21      0.283      0.153      0.084
+               Orifice          9         14      0.492      0.643      0.627      0.316
+                   PRV          3          3      0.354      0.667      0.668      0.301
+                   PSV         11         18      0.218      0.278      0.234     0.0785
+           Pinch Valve          8          8      0.449      0.112      0.212      0.123
+ Piston Operated Valve          4          4          0          0    0.00926    0.00555
+            Plug Valve         15         19      0.156      0.105     0.0927     0.0438
+Pneumatic-Diaphragm 3 Way Valve          1          1          0          0          0          0
+Pneumatic-Diaphragm Angle Valve          4          4       0.21        0.5      0.252      0.134
+Pneumatic-Diaphragm Butterfly Valve          4          5      0.104        0.2     0.0526     0.0368
+Pneumatic-Diaphragm Gate Valve         30         67      0.336      0.731      0.668      0.324
+Pneumatic-Diaphragm Globe Valve          4          4       0.12       0.25      0.246      0.123
+    Powered Gate Valve          4          4          1          0      0.131     0.0777
+   Pressure Controller          1          1          1          0          0          0
+Pressure Indicating Controller          1          1          0          0     0.0622     0.0373
+    Pressure Indicator          1          1          0          0          0          0
+     Pressure Recorder          1          1          0          0     0.0553     0.0221
+Pressure Recording Controller          1          1       0.27          1      0.995      0.497
+    Pressure Regulator          7          8      0.174      0.125       0.17      0.104
+          Relief Valve          2          3          1          0          0          0
+             Rotameter          1          1      0.344          1      0.995      0.398
+Rotary Piston-Pneumatic Gate Valve          5         11      0.149      0.364     0.0825     0.0491
+          Rotary Valve          2          2          0          0          0          0
+            Screw Pump          1          1          0          0     0.0249    0.00746
+           Slide Valve          2          2          0          0      0.284     0.0948
+ Solenoid Closed Valve          5          5      0.223        0.2      0.227      0.132
+Solenoid Operated Gate Valve          5          7      0.102      0.143      0.307      0.179
+            Stop Valve          4          4     0.0617       0.25     0.0751      0.048
+             pneumatic          1          2          1          0          0          0
+ pressure safety Valve          1          1          0          0          0          0
+         temp recorder          1          1          1          0          0          0
+       temp trasmitter          1          1          1          0      0.111     0.0774
+Speed: 0.2ms preprocess, 3.6ms inference, 0.0ms loss, 12.5ms postprocess per image
+Results saved to [1mruns/detect/train[0m
